@@ -1,19 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "./menuItems.css";
 
-const MenuItems = () => {
+const MenuItems = ({ handlePopup, fname, fprice, fimage }) => {
+  const sendData = () => {
+    handlePopup([fname, fprice, fimage]);
+  };
+
   return (
-    <section className="card">
-      <img
-        src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?cs=srgb&dl=pexels-robinstickel-70497.jpg&fm=jpg"
-        alt=""
-      />
+    <section id="menuitem" className="card">
+      <img src={fimage} />
       <div>
         <span>
-          <h5>Food Name</h5>
-          <small>500Rs</small>
+          <h5>{fname}</h5>
+          <small>{fprice}Rs</small>
         </span>
-        <span className="icon">+</span>
+        <span className="icon" onClick={sendData}>
+          +
+        </span>
       </div>
     </section>
   );

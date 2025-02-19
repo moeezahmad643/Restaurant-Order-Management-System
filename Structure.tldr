@@ -3111,8 +3111,8 @@
 			"typeName": "shape"
 		},
 		{
-			"x": -8994.22276048741,
-			"y": -933.804315468903,
+			"x": -8634.223065663191,
+			"y": -1020.4711855860905,
 			"rotation": 0,
 			"isLocked": false,
 			"opacity": 1,
@@ -3127,9 +3127,9 @@
 		{
 			"id": "pointer:pointer",
 			"typeName": "pointer",
-			"x": -9384.65393161547,
-			"y": 1640.1487456392906,
-			"lastActivityTimestamp": 1739444262950,
+			"x": -6849.430681248326,
+			"y": -535.3757136063009,
+			"lastActivityTimestamp": 1739715870330,
 			"meta": {}
 		},
 		{
@@ -3149,8 +3149,8 @@
 			"screenBounds": {
 				"x": 0,
 				"y": 0,
-				"w": 1024.666748046875,
-				"h": 513.3333740234375
+				"w": 842,
+				"h": 615.3333740234375
 			},
 			"insets": [
 				false,
@@ -3180,21 +3180,6 @@
 		{
 			"editingShapeId": null,
 			"croppingShapeId": null,
-			"selectedShapeIds": [
-				"shape:sBPltW_IG9TvskFE-C-La"
-			],
-			"hoveredShapeId": null,
-			"erasingShapeIds": [],
-			"hintingShapeIds": [],
-			"focusedGroupId": null,
-			"meta": {},
-			"id": "instance_page_state:page:page",
-			"pageId": "page:page",
-			"typeName": "instance_page_state"
-		},
-		{
-			"editingShapeId": null,
-			"croppingShapeId": null,
 			"selectedShapeIds": [],
 			"hoveredShapeId": null,
 			"erasingShapeIds": [],
@@ -3206,12 +3191,19 @@
 			"typeName": "instance_page_state"
 		},
 		{
-			"x": 10884.65393161547,
-			"y": 2356.518124477897,
-			"z": 0.1,
+			"editingShapeId": null,
+			"croppingShapeId": null,
+			"selectedShapeIds": [
+				"shape:sBPltW_IG9TvskFE-C-La"
+			],
+			"hoveredShapeId": "shape:S9G1C83b-FwvLc87u1n73",
+			"erasingShapeIds": [],
+			"hintingShapeIds": [],
+			"focusedGroupId": null,
 			"meta": {},
-			"id": "camera:page:page",
-			"typeName": "camera"
+			"id": "instance_page_state:page:page",
+			"pageId": "page:page",
+			"typeName": "instance_page_state"
 		},
 		{
 			"x": 0,
@@ -3219,6 +3211,14 @@
 			"z": 1,
 			"meta": {},
 			"id": "camera:page:jfAHM01ZVhkwR-hxJajxC",
+			"typeName": "camera"
+		},
+		{
+			"x": 11422.76411630692,
+			"y": 2918.7091486648947,
+			"z": 0.1,
+			"meta": {},
+			"id": "camera:page:page",
 			"typeName": "camera"
 		}
 	]
