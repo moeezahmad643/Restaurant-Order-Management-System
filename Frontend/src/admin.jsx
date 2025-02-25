@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./admin.css";
 import axios from "axios";
 
-const link = "http://localhost:3000";
+// const link = "http://localhost:3000";
+const link = "https://restaurant-order-management-system-mu.vercel.app";
 
 const Admin = () => {
   const [fname, setFname] = useState("");

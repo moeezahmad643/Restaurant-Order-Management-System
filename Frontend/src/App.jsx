@@ -3,7 +3,8 @@ import "./App.css";
 import MenuItems from "./components/menuitems/menuItems";
 import axios from "axios";
 import { useParams } from "react-router";
-const link = "http://localhost:3000";
+// const link = "http://localhost:3000";
+const link = "https://restaurant-order-management-system-mu.vercel.app";
 
 function App() {
   const { "*": wildcardValue } = useParams(); // Get the value of *
