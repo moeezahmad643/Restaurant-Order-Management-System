@@ -64,7 +64,18 @@ main {
         cursor: pointer;
       }
     }
+    > button{
+      width: 100%;
+      background-color: #ffb600;
+      color: black;
+      border: 0px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-shadow: 0  .2px black;
+      margin-bottom: 10px;
+    }
   }
+
 }
 
 .crossicon {

@@ -1,0 +1,16 @@
+#ordered{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100lvh;
+    width: 100lvw;
+
+    > span{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .link{
+            color: white;
+        }
+    }
+}

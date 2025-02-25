@@ -6,12 +6,15 @@ let db = new sqlite3.Database("./orders.db", (err) => {
 });
 
 const createTableQueryForOrders = `
-    CREATE TABLE IF NOT EXISTS orders (
+    CREATE TABLE IT NOT EXISTS orders (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     fname TEXT,
-    fquantity INTEGER,
-    table_no INTEGER,
+    quantity INTEGER,
     price INTEGER,
-    time INTEGER
+    tPrice INTEGER,
+    tableNo INTEGER,
+    time INTEGER,
+    condition boolean default true
 )
 `;
 

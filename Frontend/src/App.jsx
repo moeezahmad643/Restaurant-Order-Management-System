@@ -2,8 +2,15 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import MenuItems from "./components/menuitems/menuItems";
 import axios from "axios";
+import { useParams } from "react-router";
+const link = "http://localhost:3000";
 
 function App() {
+  const { "*": wildcardValue } = useParams(); // Get the value of *
+  console.log(wildcardValue);
+
+  const [quantity, setQuantity] = useState(1);
+
   const [items, setItems] = useState([]);
   const [fname, setFname] = useState("Loading....");
   const [price, setPrice] = useState("Loading....");
@@ -20,9 +27,36 @@ function App() {
     setShowingPopUp(true);
   };
 
+  const handleIncrement = () => {
+    setQuantity(quantity + 1);
+  };
+  const handleDecrement = () => {
+    if (quantity != 1) {
+      setQuantity(quantity - 1);
+    }
+  };
+
+  const addOrder = () => {
+    axios
+      .post(`${link}/addOrder`, {
+        fname: fname,
+        quantity: quantity,
+        price: price,
+        tPrice: price * quantity,
+        tableNo: wildcardValue,
+        time: Date.now(),
+      })
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.error("Error adding order:", err);
+      });
+  };
+
   useEffect(() => {
     axios
-      .get("http://localhost:3000/getFood")
+      .get(`${link}/getFood`)
       .then((res) => {
         setItems(res.data);
         console.log(res.data);
@@ -34,7 +68,6 @@ function App() {
 
   return (
     <main>
-     
       {items.map((element, index) => (
         <MenuItems
           key={index} // Added key prop for list rendering optimization
@@ -61,13 +94,20 @@ function App() {
               </div>
               <div>
                 <span>
-                  <span className="icon">+</span>
-                  <p>1</p>
-                  <span className="icon">-</span>
+                  <span className="icon" onClick={handleIncrement}>
+                    +
+                  </span>
+                  <p>{quantity}</p>
+                  <span className="icon" onClick={handleDecrement}>
+                    -
+                  </span>
                 </span>
-                <h3>500Rs</h3>
+                <h5>Total: {price * quantity}Rs</h5>
               </div>
             </section>
+            <button onClick={addOrder}>
+              Order {fname} {quantity}
+            </button>
           </div>
         </div>
       )}

@@ -1,36 +1,61 @@
-
 #admin {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
 
+  form {
     display: flex;
-    height: 100vh;
-    width: 100vw;
-    justify-content: center;
+    border: 1px solid white;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 20px;
     align-items: center;
-
-
-    form{
-        display: flex;
-        border: 1px solid white;
-        flex-direction: column;
-        padding: 20px;
-        border-radius: 10px;
-        gap: 20px;
-        align-items: center;
-        input{
-            border-radius: 5px;
-            padding: 10px 20px;
-        }
-        button{
-            padding: 10px 20px;
-            border-radius: 5px;
-            background-color: #f1f1f1;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-        }
+    input {
+      border-radius: 5px;
+      padding: 10px 20px;
     }
-
+    button {
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #f1f1f1;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+  }
 }
 
+.orders {
+  display: flex;
+  flex-wrap: wrap;
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
 
-
+    span {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      > button {
+        background-color: green;
+        color: rgb(255, 255, 255);
+        border: 0px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-shadow: 0 0.2px black;
+        margin-bottom: 10px;
+      }
+    }
+    .orderDetails {
+      padding: 0 30px;
+    }
+  }
+}
