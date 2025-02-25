@@ -12,6 +12,10 @@ app.get("/", (req, res) => {
   res.send("Server is live");
 });
 
+app.get("/2", (req, res) => {
+  res.send("Server is live2");
+});
+
 app.get("/allOrders", (req, res) => {
   db.all("SELECT * FROM orders", (err, rows) => {
     if (err) {
