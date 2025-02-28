@@ -1,0 +1,14 @@
+nav {
+  display: flex;
+  padding: 15px;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  img {
+    height: 50px;
+    width: 50px;
+  }
+  h1{
+    color: #FFB600;
+    font-family:cursive;
+  }
+}
